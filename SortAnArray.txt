@@ -1,0 +1,40 @@
+package arrays;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class SortAnArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner arr = new Scanner(System.in);
+		int i,j,k;
+		System.out.print("Enter the length of an array: ");
+		int z = arr.nextInt();
+		int[] a = new int[z];
+		int[] b = new int[z];
+		System.out.println("Enter the elements of Array");
+		for(i=0; i<a.length;i++)
+		{
+			a[i]=arr.nextInt();
+			b[i]= a[i];
+			
+		}
+		for(j=0;j<a.length;j++) // j=5<5 
+		{
+			for(k=j+1;k<a.length;k++) // k=5<5  [3 4 5 6 21]
+			{
+				if(a[j]>a[k]) //21>6
+				{
+					int temp = a[j]; //temp=21
+					a[j] = a[k];   // 21=6;
+					a[k] = temp;   //6=21;
+				}
+			}
+		}
+		System.out.println("Array Before sorting :"+ (Arrays.toString(b)));
+		System.out.println("Array After sorting :"+ (Arrays.toString(a)));
+	}
+
+}
