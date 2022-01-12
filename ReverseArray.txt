@@ -1,0 +1,22 @@
+package arrays;
+import java.util.*;
+public class ReverseArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner scan = new Scanner(System.in);
+		int[] arr = new int[6];
+		int[] rev = new int[6];
+		System.out.println("Enter the Elements of Array :");
+		
+		   for(int i=0,j=arr.length-1; i<arr.length;i++,j--)
+		   {
+			   arr[i]=scan.nextInt();
+				rev[j]= arr[i];			
+		   }		
+		System.out.println("Elements of array before reversed : "+(Arrays.toString(arr)));
+		System.out.println("Elements of array after reversed : "+(Arrays.toString(rev)));
+	}
+
+}
