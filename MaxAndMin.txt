@@ -1,0 +1,31 @@
+public class MaxAndMin {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		int[] arr = new int[6];
+		int large=0, small=0;
+		System.out.println("Enter the number : ");
+		for(int a=0; a<arr.length; a++)
+		{
+			arr[a] = scan.nextInt();
+		}
+		large=small=arr[0];
+		for(int a=1; a<arr.length; a++)
+		{
+			
+			if(arr[a]>large)
+			{
+				large = arr[a];
+			}
+			else if(arr[a]<small)
+			{
+				small = arr[a];
+			}
+		}
+		System.out.println();
+		System.out.println("The largest number is "+large);
+		System.out.println("The Smallest number is "+small);
+	}
+
+}
