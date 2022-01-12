@@ -1,0 +1,32 @@
+package arrays;
+import java.util.*;
+public class RemoveIndex {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		//getting user input of index place to be removed
+		System.out.println("Enter the index number to be removed :");
+		int index = scan.nextInt();
+		
+		int[] num  = {10,20,30,40,50,60,70};
+		//reducing the array length
+		int[] arr = new int[num.length-1];
+		//removing the index number from the existing array
+		for(int i=0; i<num.length-1; i++)
+		{
+			if(i<index) // 0<0 
+			{
+			arr[i] = num[i];
+			}
+			else if(i>=index) // 0>=0
+			{
+				arr[i]=num[i+1]; //10=20
+			}
+			
+		}
+		System.out.println(Arrays.toString(num));
+		System.out.println(Arrays.toString(arr));
+	}
+
+}
